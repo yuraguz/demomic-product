@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public interface ProductResource {
 
-    @RequestMapping(value = "/product", method = RequestMethod.POST)
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    ProductResponse getProduct(int productId);
+
+    @RequestMapping(value = "/products", method = RequestMethod.POST)
     ProductResponse createProduct();
 
 }
