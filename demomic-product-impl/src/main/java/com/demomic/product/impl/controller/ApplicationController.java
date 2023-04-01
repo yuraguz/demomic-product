@@ -1,19 +1,18 @@
 package com.demomic.product.impl.controller;
 
 import com.demomic.product.api.resource.ApplicationResource;
+import com.demomic.product.impl.properties.ApplicationProperties;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
 public class ApplicationController implements ApplicationResource {
 
-    @Value("${example.property}")
-    private final String exampleProperty;
+    private final ApplicationProperties applicationProperties;
 
     @Override
     public String getExampleConfigProperty() {
-        return exampleProperty;
+        return applicationProperties.getGreetingMessage();
     }
 }

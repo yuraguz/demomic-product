@@ -4,3 +4,5 @@ spring:
   config:
     import: optional:configserver:http://localhost:9000
 
+demomic-product:
+  greetingMessage: "Some message"
