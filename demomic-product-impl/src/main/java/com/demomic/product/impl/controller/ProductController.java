@@ -17,6 +17,10 @@ public class ProductController implements ProductResource {
     private final ProductMapper productMapper;
     private final RepositoryRepository repositoryRepository;
 
+    public ProductResponse getProduct(int productId) {
+        return new ProductResponse(UUID.randomUUID(), "Some product name");
+    }
+
     @Override
     public ProductResponse createProduct() {
         var product = repositoryRepository.save(new Product(UUID.randomUUID(), "test name"));
