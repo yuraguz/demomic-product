@@ -1,21 +1,21 @@
-package com.demomic.product.impl.model;
+package com.demomic.product.impl.model.data.catalog;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.UUID;
 
 @Data
-@Entity
+@Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class CatalogData {
 
-    @Id
     private UUID id;
 
     private String name;
+
+    private CatalogType type;
 }

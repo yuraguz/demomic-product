@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/DEMOMIC_PRODUCT
+    username: DEMOMIC_PRODUCT
+    password: DEMOMIC_PRODUCT
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    enabled: false
+
+demomic-product:
+  greetingMessage: "Some message"
+
+
+
+

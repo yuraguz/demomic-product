@@ -3,7 +3,9 @@ spring:
     name: demomic-product
   config:
     import: optional:configserver:http://demomic-config:9000
-  jpa.hibernate.ddl-auto: create-drop
+  jpa.hibernate.ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
 
 eureka:
   instance:
